@@ -1,23 +1,27 @@
 import express from 'express';
-import dotenv from 'dotenv';
-
-dotenv.config();
+import tenantRoutes from './routes/tenantRoutes';
+import roomRoutes from './routes/roomRoutes';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+// Middleware
 app.use(express.json());
 
-// Health check
+// Health Check
 app.get('/health', (req, res) => {
-  res.json({ status: 'OK', timestamp: new Date() });
+  res.json({ status: 'ok', timestamp: new Date() });
 });
 
-// API version
 app.get('/api/v1/health', (req, res) => {
-  res.json({ status: 'OK', version: '1.0.0' });
+  res.json({ status: 'ok', timestamp: new Date() });
 });
 
+// Routes
+app.use('/api/v1/tenants', tenantRoutes);
+app.use('/api/v1/rooms', roomRoutes);
+
+// Start Server
 app.listen(PORT, () => {
   console.log(`✅ Server running on port ${PORT}`);
   console.log(`📍 Health check: http://localhost:${PORT}/health`);
