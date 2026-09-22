@@ -1,6 +1,8 @@
 import express from 'express';
 import tenantRoutes from './routes/tenantRoutes';
 import roomRoutes from './routes/roomRoutes';
+import tenantshipRoutes from './routes/tenantshipRoutes';
+import billingRoutes from './routes/billingRoutes';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -20,6 +22,8 @@ app.get('/api/v1/health', (req, res) => {
 // Routes
 app.use('/api/v1/tenants', tenantRoutes);
 app.use('/api/v1/rooms', roomRoutes);
+app.use('/api/v1/tenantships', tenantshipRoutes);
+app.use('/api/v1/billings', billingRoutes);
 
 // Start Server
 app.listen(PORT, () => {
