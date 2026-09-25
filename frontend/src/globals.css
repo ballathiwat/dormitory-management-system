@@ -1,0 +1,77 @@
+/* frontend/src/globals.css */
+/* frontend/src/globals.css */
+@import "tailwindcss";
+@import "@fontsource/ibm-plex-sans-thai/400.css";
+@import "@fontsource/ibm-plex-sans-thai/500.css";
+@import "@fontsource/ibm-plex-sans-thai/600.css";
+@import "@fontsource/ibm-plex-sans/400.css";
+@import "@fontsource/ibm-plex-sans/500.css";
+@import "@fontsource/ibm-plex-sans/600.css";
+@import "@fontsource/jetbrains-mono/600.css";
+
+
+@import "tailwindcss";
+
+:root {
+  /* Colors - Background & Surface */
+  --color-background: #FFFFFF;
+  --color-surface: #F6F8F7;
+  --color-surface-raised: #EDF2F1;
+  --color-border: #E1E7E5;
+
+  /* Colors - Primary (Teal) */
+  --color-primary: #088386;
+  --color-primary-hover: #076F71;
+  --color-primary-pressed: #065C5E;
+  --color-primary-ink: #FFFFFF;
+
+  /* Colors - Accent (Yellow) */
+  --color-accent: #FEC938;
+  --color-accent-hover: #FFD65C;
+  --color-accent-pressed: #E8B32A;
+  --color-accent-ink: #1F2937;
+
+  /* Colors - Text */
+  --color-text-primary: #14231F;
+  --color-text-secondary: #5B6866;
+  --color-text-disabled: #A9B2B0;
+
+  /* Colors - Danger */
+  --color-danger: #DC4C4C;
+  --color-danger-surface: #FBEAEA;
+
+  /* Font Families */
+  --font-sans: 'IBM Plex Sans Thai', 'IBM Plex Sans', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(20, 35, 31, 0.08);
+  --shadow-md: 0 12px 28px rgba(20, 35, 31, 0.14);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-text-primary);
+  background-color: var(--color-surface);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: var(--color-primary);
+}
+
+a:hover {
+  color: var(--color-primary-hover);
+}
+
+::selection {
+  background-color: var(--color-accent);
+  color: var(--color-accent-ink);
+}
