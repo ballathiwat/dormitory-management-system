@@ -34,7 +34,7 @@ export default function Sidebar({
           height: 56,
           display: 'flex',
           alignItems: 'center',
-          padding: collapsed ? '0 16px' : '0 16px',
+          padding: '0 16px',
           flexDirection: collapsed ? 'column' : 'row',
           justifyContent: collapsed ? 'center' : 'space-between',
           gap: 10,
@@ -110,9 +110,6 @@ export default function Sidebar({
                 gap: 12,
                 padding: '10px 20px',
                 background: isActive ? 'rgba(255,255,255,0.18)' : 'transparent',
-                borderLeft: isActive
-                  ? '3px solid #FEC938'
-                  : '3px solid transparent',
                 border: 'none',
                 borderLeftStyle: 'solid',
                 borderLeftWidth: 3,
